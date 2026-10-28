@@ -1,0 +1,119 @@
+/**
+ * PixelPlay - Responsive Media Queries
+ */
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .daily-banner-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .daily-banner-action {
+    width: 100%;
+  }
+
+  .daily-banner-action .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  .site-header {
+    padding: 0 var(--space-2);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-surface);
+    border-bottom: 1px solid var(--color-border-subtle);
+    padding: var(--space-4);
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+    display: none;
+    box-shadow: var(--shadow-lg);
+    z-index: var(--z-dropdown);
+  }
+
+  .nav-menu.mobile-open {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+  }
+
+  .game-shell-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-shell-scores {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .game-shell-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .library-filter-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .sort-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: var(--space-4) var(--space-3) var(--space-8);
+  }
+
+  .hero-section {
+    padding: var(--space-6) 0 var(--space-8);
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .game-overlay-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .game-overlay-buttons .btn {
+    width: 100%;
+  }
+}

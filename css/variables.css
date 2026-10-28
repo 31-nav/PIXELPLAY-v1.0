@@ -1,0 +1,145 @@
+/**
+ * PixelPlay - Design System Tokens & CSS Custom Properties
+ */
+
+:root {
+  /* Color Palette - Midnight Dark (Default) */
+  --color-bg-base: #101018;
+  --color-bg-surface: #1D1D2B;
+  --color-bg-surface-elevated: #26263A;
+  --color-bg-surface-hover: #2F2F48;
+  --color-bg-overlay: rgba(16, 16, 24, 0.85);
+
+  --color-primary: #7867FF;
+  --color-primary-hover: #8D7EFF;
+  --color-primary-active: #6653FA;
+  --color-primary-subtle: rgba(120, 103, 255, 0.15);
+
+  --color-secondary: #42E8B4;
+  --color-secondary-hover: #5CF0C2;
+  --color-secondary-active: #2CD6A0;
+  --color-secondary-subtle: rgba(66, 232, 180, 0.15);
+
+  --color-accent-amber: #FFB347;
+  --color-accent-coral: #FF6B6B;
+  --color-accent-blue: #4EA8DE;
+
+  --color-text-primary: #F5F5FA;
+  --color-text-secondary: #B7B4CF;
+  --color-text-muted: #7E7B9A;
+  --color-text-inverse: #101018;
+
+  --color-border-subtle: #2B2A3D;
+  --color-border-medium: #3A3952;
+  --color-border-strong: #525075;
+  --color-border-accent: rgba(120, 103, 255, 0.4);
+
+  --color-success: #42E8B4;
+  --color-warning: #FFB347;
+  --color-danger: #FF6B6B;
+  --color-info: #4EA8DE;
+
+  /* Typography */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  --font-family-display: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-md: 1.125rem;    /* 18px */
+  --font-size-lg: 1.25rem;     /* 20px */
+  --font-size-xl: 1.5rem;      /* 24px */
+  --font-size-2xl: 2rem;       /* 32px */
+  --font-size-3xl: 2.5rem;     /* 40px */
+  --font-size-4xl: 3rem;       /* 48px */
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-heavy: 800;
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-glow-primary: 0 0 20px rgba(120, 103, 255, 0.3);
+  --shadow-glow-secondary: 0 0 20px rgba(66, 232, 180, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Focus Outlines */
+  --focus-ring: 2px solid var(--color-secondary);
+  --focus-ring-offset: 2px;
+
+  /* Z-Index Layers */
+  --z-base: 1;
+  --z-header: 100;
+  --z-dropdown: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  /* Layout */
+  --container-max-width: 1200px;
+  --header-height: 68px;
+}
+
+/* Light Theme Overrides */
+[data-theme="light"] {
+  --color-bg-base: #F5F5FA;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-elevated: #EDEBF8;
+  --color-bg-surface-hover: #E3E0F4;
+  --color-bg-overlay: rgba(245, 245, 250, 0.9);
+
+  --color-primary: #5A48EC;
+  --color-primary-hover: #4835D8;
+  --color-primary-active: #3825C2;
+  --color-primary-subtle: rgba(90, 72, 236, 0.12);
+
+  --color-secondary: #0BAF82;
+  --color-secondary-hover: #089A72;
+  --color-secondary-active: #067B5B;
+  --color-secondary-subtle: rgba(11, 175, 130, 0.12);
+
+  --color-text-primary: #12111E;
+  --color-text-secondary: #56546E;
+  --color-text-muted: #82809A;
+  --color-text-inverse: #FFFFFF;
+
+  --color-border-subtle: #E2E0EC;
+  --color-border-medium: #CCC9DE;
+  --color-border-strong: #AEA9C9;
+  --color-border-accent: rgba(90, 72, 236, 0.35);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.12);
+  --shadow-glow-primary: 0 0 16px rgba(90, 72, 236, 0.2);
+  --shadow-glow-secondary: 0 0 16px rgba(11, 175, 130, 0.2);
+}

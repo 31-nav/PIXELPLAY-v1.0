@@ -1,0 +1,22 @@
+/**
+ * PixelPlay - Endless Runner Styles
+ */
+
+.runner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.runner-canvas {
+  background-color: #0B0A14;
+  border: 2px solid var(--color-border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 24px rgba(120, 103, 255, 0.2);
+  max-width: 640px;
+  width: 100%;
+  aspect-ratio: 640 / 320;
+  touch-action: manipulation;
+}

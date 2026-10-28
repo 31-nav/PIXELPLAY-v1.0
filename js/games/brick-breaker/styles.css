@@ -1,0 +1,23 @@
+/**
+ * PixelPlay - Brick Breaker Styles
+ */
+
+.brick-breaker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.brick-canvas {
+  background-color: #0E0D18;
+  border: 2px solid var(--color-border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 20px rgba(120, 103, 255, 0.15);
+  max-width: 480px;
+  width: 100%;
+  aspect-ratio: 480 / 420;
+  cursor: ew-resize;
+  touch-action: none;
+}

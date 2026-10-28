@@ -1,0 +1,18 @@
+{
+  "name": "PixelPlay Mini-Games",
+  "short_name": "PixelPlay",
+  "description": "Premium browser-based casual mini-games platform.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101018",
+  "theme_color": "#7867FF",
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

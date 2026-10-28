@@ -1,0 +1,236 @@
+/**
+ * PixelPlay - Shared Game Specific Styles
+ */
+
+/* Common Canvas Game Elements */
+.game-canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: var(--radius-sm);
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* 2048 Board & Tile Styles */
+.game-2048-board {
+  position: relative;
+  background-color: #161522;
+  border: 4px solid var(--color-border-medium);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1;
+  user-select: none;
+  touch-action: none;
+}
+
+[data-theme="light"] .game-2048-board {
+  background-color: #BBADA0;
+  border-color: #A39485;
+}
+
+.game-2048-cell {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-heavy);
+  font-size: clamp(1.2rem, 4vw, 2.2rem);
+  color: #F5F5FA;
+  transition: transform 120ms ease-in-out, background-color 120ms ease;
+}
+
+[data-theme="light"] .game-2048-cell {
+  background-color: rgba(238, 228, 218, 0.35);
+  color: #776E65;
+}
+
+.game-2048-cell[data-value="2"] { background-color: #EEE4DA; color: #776E65; }
+.game-2048-cell[data-value="4"] { background-color: #EDE0C8; color: #776E65; }
+.game-2048-cell[data-value="8"] { background-color: #F2B179; color: #F9F6F2; }
+.game-2048-cell[data-value="16"] { background-color: #F59563; color: #F9F6F2; }
+.game-2048-cell[data-value="32"] { background-color: #F67C5F; color: #F9F6F2; }
+.game-2048-cell[data-value="64"] { background-color: #F65E3B; color: #F9F6F2; }
+.game-2048-cell[data-value="128"] { background-color: #EDCF72; color: #F9F6F2; font-size: 1.8rem; box-shadow: 0 0 10px rgba(237, 207, 114, 0.4); }
+.game-2048-cell[data-value="256"] { background-color: #EDCC61; color: #F9F6F2; font-size: 1.8rem; box-shadow: 0 0 15px rgba(237, 204, 97, 0.5); }
+.game-2048-cell[data-value="512"] { background-color: #EDC850; color: #F9F6F2; font-size: 1.8rem; box-shadow: 0 0 20px rgba(237, 200, 80, 0.6); }
+.game-2048-cell[data-value="1024"] { background-color: #EDC53F; color: #F9F6F2; font-size: 1.4rem; box-shadow: 0 0 25px rgba(237, 197, 63, 0.7); }
+.game-2048-cell[data-value="2048"] { background-color: #EDC22E; color: #F9F6F2; font-size: 1.4rem; box-shadow: 0 0 30px rgba(237, 194, 46, 0.8); }
+
+/* Memory Match Styles */
+.memory-board {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.memory-board.grid-4x3 { grid-template-columns: repeat(4, 1fr); }
+.memory-board.grid-4x4 { grid-template-columns: repeat(4, 1fr); }
+.memory-board.grid-6x4 { grid-template-columns: repeat(6, 1fr); }
+
+.memory-card {
+  aspect-ratio: 1;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.memory-card.flipped, .memory-card.matched {
+  transform: rotateY(180deg);
+}
+
+.memory-card.matched {
+  box-shadow: 0 0 12px var(--color-secondary);
+}
+
+.memory-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  border: 1px solid var(--color-border-medium);
+}
+
+.memory-card-back {
+  background: linear-gradient(135deg, var(--color-bg-surface-elevated), var(--color-bg-surface-hover));
+  color: var(--color-primary);
+}
+
+.memory-card-front {
+  background-color: var(--color-bg-surface);
+  transform: rotateY(180deg);
+}
+
+/* Tic Tac Toe Grid */
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.ttt-cell {
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-border-medium);
+  border-radius: var(--radius-md);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--color-text-primary);
+}
+
+.ttt-cell:hover:not(:disabled) {
+  background-color: var(--color-bg-surface-elevated);
+  border-color: var(--color-primary);
+}
+
+.ttt-cell.winner {
+  background-color: var(--color-primary-subtle);
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.ttt-cell.cell-x { color: var(--color-primary); }
+.ttt-cell.cell-o { color: var(--color-secondary); }
+
+/* Reaction Rush Styles */
+.reaction-box {
+  width: 100%;
+  max-width: 520px;
+  min-height: 340px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  padding: var(--space-6);
+  transition: background-color var(--transition-fast);
+}
+
+.reaction-box.state-idle {
+  background-color: var(--color-bg-surface);
+  border: 2px dashed var(--color-border-medium);
+}
+
+.reaction-box.state-waiting {
+  background-color: #9E2A2B;
+  color: #FFFFFF;
+}
+
+.reaction-box.state-ready {
+  background-color: #2B9348;
+  color: #FFFFFF;
+  box-shadow: 0 0 35px rgba(43, 147, 72, 0.7);
+}
+
+.reaction-box.state-early {
+  background-color: #D90429;
+  color: #FFFFFF;
+}
+
+.reaction-box.state-result {
+  background-color: var(--color-bg-surface-elevated);
+  border: 2px solid var(--color-secondary);
+}
+
+/* Sequence Master Pads */
+.sequence-board {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.sequence-pad {
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: transform 100ms ease, filter 100ms ease, opacity 100ms ease;
+  opacity: 0.75;
+  box-shadow: var(--shadow-md);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.sequence-pad:active, .sequence-pad.active {
+  transform: scale(0.96);
+  opacity: 1;
+  filter: brightness(1.5);
+  box-shadow: 0 0 25px currentColor;
+}
+
+.sequence-pad.pad-green { background-color: #2EC4B6; color: #2EC4B6; }
+.sequence-pad.pad-red { background-color: #E71D36; color: #E71D36; }
+.sequence-pad.pad-yellow { background-color: #FF9F1C; color: #FF9F1C; }
+.sequence-pad.pad-blue { background-color: #4361EE; color: #4361EE; }

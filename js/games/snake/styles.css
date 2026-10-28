@@ -1,0 +1,26 @@
+/**
+ * PixelPlay - Snake Styles
+ */
+
+.snake-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.snake-canvas {
+  background-color: #0E0D18;
+  border: 2px solid var(--color-border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 20px rgba(66, 232, 180, 0.15);
+  max-width: 440px;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+[data-theme="light"] .snake-canvas {
+  background-color: #E6E4F2;
+  border-color: #CBC7E5;
+}

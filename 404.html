@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 Page Not Found • PixelPlay</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--color-bg-base);
+      color: var(--color-text-primary);
+    }
+    .not-found-card {
+      max-width: 480px;
+      padding: 3rem 2rem;
+      background-color: var(--color-bg-surface);
+      border: 1px solid var(--color-border-subtle);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+    }
+  </style>
+</head>
+<body>
+  <div class="not-found-card">
+    <div style="font-size: 4rem; margin-bottom: 1rem;">👾</div>
+    <h1 style="margin-bottom: 0.5rem; font-size: 2rem;">404 - Page Not Found</h1>
+    <p style="color: var(--color-text-secondary); margin-bottom: 2rem;">
+      The page or game you requested was not found. Let's get you back to the gaming action!
+    </p>
+    <a href="./index.html#/" class="btn btn-primary btn-lg">Return to PixelPlay Home</a>
+  </div>
+</body>
+</html>

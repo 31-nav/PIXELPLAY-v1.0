@@ -1,0 +1,26 @@
+/**
+ * PixelPlay - Tic-Tac-Toe Styles
+ */
+
+.ttt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: var(--space-4);
+  padding: var(--space-2);
+}
+
+.ttt-mode-select {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.ttt-status {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  min-height: 28px;
+}
